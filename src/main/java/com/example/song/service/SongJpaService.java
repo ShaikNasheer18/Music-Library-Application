@@ -33,19 +33,11 @@ public class SongJpaService implements SongRepository {
       }
       
   } 
-   @Override
-  public Song addSong(Song song) {
-
-    try {
-      songJpaRepository.save(song);
-      return song;
+ @Override
+    public Song addSong(Song song) {
+        songJpaRepository.save(song);
+        return song;
     }
-    finally{
-      
-    }
-
-    
-  }
    @Override
   public Song updateSong(int songId, Song  song) {
     try {
